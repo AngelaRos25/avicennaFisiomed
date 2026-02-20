@@ -1,16 +1,13 @@
 .main-box {
+  background-image: url("/assets/img/foto-homepage.jpg");
+  background-size: 100% 100%;
+  background-position: center;
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
-.img-box {
-  background-image: url("/assets/img/foto-homepage.png");
-    height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 div.hero {
   position: relative;
@@ -86,7 +83,7 @@ div.hero p {
 }
 
 @media (max-width: 576px) {
-  .img-box {
+  .main {
     position: relative;
     background-image: url("/assets/img/foto-mobile.png");
     background-size: 100% 100%;

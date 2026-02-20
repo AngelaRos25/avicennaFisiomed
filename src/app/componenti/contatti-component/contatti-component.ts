@@ -9,7 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class ContattiComponent implements AfterViewInit {
 
-  private map: any; // can't use L.Map until we import L dynamically
+  private map: any; 
   private centroid: [number, number] = [45.47393, 12.23573]
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }

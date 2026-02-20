@@ -160,7 +160,6 @@ width: auto;
   height: 40px;
   padding: 5px 10px;
   border-radius: 25px;
-  border: none;
 }
 
 .search-dropdown {
@@ -258,10 +257,6 @@ width: auto;
     justify-content: space-between;
     padding-right: 20%;
   }
-
-    .nav-item:hover {
-  background-color: #026568;
-}
 }
 
 
@@ -338,8 +333,4 @@ width: auto;
   .search-container {
     overflow: visible;
   }
-
-  .nav-item:hover {
-  background-color: #026568;
-}
 }
