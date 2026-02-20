@@ -1,60 +1,68 @@
 .container-prenota {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.container-img {
   height: 100vh;
-  background-image: url("/assets/img/128G7466.jpg");
+  background-image: url("/assets/img/foto-prenota.jpg");
   background-size: cover;
   background-position: center;
-  margin-bottom: 50px;
-  }
+}
 
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: flex-end;
-    padding-bottom: 100px;
-  }
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+}
 
+.container p {
+  color: white;
+  font-weight: 900;
+  font-size: 25px;
+  width: 50%;
+  text-align: right;
+  line-height: 30px;
+  text-shadow: rgba(255, 255, 255, 0.718) 1px 1px 8px;
+  margin-bottom: 25px;
+}
+
+.prenota-qui {
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  width: 180px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.prenota-qui:hover {
+  background-color: rgb(204, 202, 202);
+}
+
+.prenota-qui:active {
+  background-color: #026568;
+  color: white;
+}
+
+
+@media (max-width: 576px) {
   .container p {
-    color: white;
-    font-weight: 900;
-    font-size: 25px;
-    width: 50%;
-    text-align: right;
-    line-height: 30px;
-    text-shadow: rgba(255, 255, 255, 0.718) 1px 1px 8px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    width: 80%;
+    line-height: 20px;
   }
 
   .prenota-qui {
-    font-weight: 700;
-    font-size: 18px;
-    border: none;
-    width: 180px;
-    height: 50px;
-    border-radius: 15px;
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
   }
 
-  .prenota-qui:hover {
-    background-color: rgb(204, 202, 202);
+  .container-img {
+      background-image: url("/assets/img/foto-prenota-mobile.jpg");
   }
-
-  .prenota-qui:active {
-    background-color: #026568; 
-    color: white;
-  }
-  
-
-  @media (max-width: 576px) {
-    .container p {
-      font-size: 16px;
-      width: 80%;
-      line-height: 20px;
-    }
-
-    .prenota-qui {
-      width: 140px;
-      height: 40px;
-      font-size: 14px;
-    }
-  }
+}

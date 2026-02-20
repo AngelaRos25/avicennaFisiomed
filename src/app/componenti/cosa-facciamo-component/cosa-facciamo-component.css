@@ -134,7 +134,7 @@ mat-icon {
 
   .card {
     margin: 0 0 10px 0;
-    width: 150px !important;
+    width: 190px !important;
   }
 
   .card-container {
@@ -154,8 +154,8 @@ mat-icon {
 
   .image-container {
     position: relative;
-    width: 150px;
-    height: 100px;
+    width: 190px;
+    height: 130px;
     aspect-ratio: 3 / 4;
   }
 
