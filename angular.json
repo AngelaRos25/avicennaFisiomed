@@ -27,7 +27,7 @@
               "src/material-theme.scss",
               "src/styles.css"
             ],
-            "outputMode": "server",
+            "outputMode": "static",
             "ssr": {
               "entry": "src/server.ts"
             }
