@@ -1,0 +1,69 @@
+.servizi-component {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.servizi-component h1 {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+
+.menu {
+  max-width: 1100px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin: 10px;
+}
+
+.linea {
+  margin: 10px 0 10px 0;
+  width: 70%;
+  height: 3px;
+  background-color: #026568;
+}
+
+.menu ul {
+  padding: 0 0 0 10px ;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.colonna h6 {
+  font-size: 22px;
+}
+
+.menu ul li a {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+.menu ul li a:hover {
+  color: #026568;
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .menu {
+    width: auto;
+    grid-template-columns: 1fr ;
+    gap: 10px;
+  }
+
+  .colonna h6 {
+  font-size: 18px;
+}
+
+.menu ul li a {
+  font-size: 16px;
+}
+
+}

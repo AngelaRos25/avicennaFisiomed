@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container">
+    <div class="box-logo">
+      <img class="logo" [ngSrc]="logoPath" fill priority alt="Logo">
+    </div>
+
+    <!-- pulsante mobile per aprire il menu -->
+    <button class="navbar-toggler" type="button" (click)="menuOpen = !menuOpen">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [class.show]="menuOpen">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" (click)="menuOpen = false">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" (click)="menuOpen = false; scrollTo('chi-siamo')">Chi siamo</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/" (click)="menuOpen = false; scrollTo('cosa-facciamo')">Cosa facciamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" (click)="menuOpen = false; scrollTo('prenota')">Prenota</a>
+        </li> -->
+
+
+        <!-- menu servizi dropdown -->
+        <!-- MENU SERVIZI -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Servizi
+          </a>
+
+          <div class="dropdown-menu mega-menu">
+            <div class="mega-container">
+              <div class="row g-4">
+
+                <!-- colonna 1 -->
+                <div class="col-md-4" *ngIf="filteredServ.length > 0">
+                  <div class="col-md-8">
+                    <h6>{{ filteredServ[0].title }}</h6>
+                    <ul class="list-unstyled">
+                      <li *ngFor="let servizio of filteredServ[0].list">
+                        <a [routerLink]="['/servizi', servizio.id]" [innerHTML]="servizio.titleServizio">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <hr>
+                </div>
+                <!-- COLONNE 2 + 3 (2 righe ciascuna) -->
+                <div class="col-md-8">
+                  <div class="row g-4">
+
+                    <div class="col-md-6" *ngFor="let data of filteredServ.slice(1)">
+                      <h6>{{ data.title }}</h6>
+                      <ul class="list-unstyled">
+                        <li *ngFor="let servizio of data.list">
+                          <a [routerLink]="['/servizi', servizio.id]" [innerHTML]="servizio.titleServizio">
+                          </a>
+                        </li>
+                      </ul>
+                      <hr>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contatti" (click)="menuOpen = false">Contatti</a>
+        </li>
+
+        <!-- searchbar -->
+        <li class="nav-item-search">
+          <div class="s-box">
+            <button class="open-search" (click)="openSearch()">
+              <mat-icon class="search">search</mat-icon>
+            </button>
+            <div class="search-container" [class.active]="isOpen">
+              <input class="search-control" type="text" (input)="onSearch()" (focus)="overlayOpen.set(true)"
+                placeholder="Search" [(ngModel)]="searchText" cdkOverlayOrigin #trigger="cdkOverlayOrigin" #searchbar>
+            </div>
+            <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger"
+              [cdkConnectedOverlayOpen]="overlayOpen()" (overlayOutsideClick)="overlayOpen.set(false)">
+
+              <div class="search-dropdown" *ngIf="filteredFlatServices.length > 0">
+                <div class="suggestion-item" *ngFor="let servizio of filteredFlatServices"
+                  (click)="goToService(servizio.id)">
+                  <span [innerHTML]="servizio.titleServizio"></span>
+                </div>
+              </div>
+
+            </ng-template>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

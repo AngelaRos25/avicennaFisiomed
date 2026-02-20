@@ -1,0 +1,29 @@
+<section class="section-servizi" *ngIf=" page; else notFound">
+  <div class="container">
+    <img [ngSrc]="page.image" width="400" height="600" alt="">
+    <div class="dx">
+      <h1>{{page.title}}</h1>
+      <div class="p-container">
+        <p class="p-description">{{page.description}}</p>
+        <div *ngIf="page.utils && page.utils.length > 0">
+          <h5>È utile a:</h5>
+          <ul>
+            <li *ngFor="let util of page.utils">
+              <img class="check" [ngSrc]="util.icon" width="10" height="10" alt="">
+              <p>{{util.text}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="button-box">
+          <button class="prenota">PRENOTA ORA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-box">
+    <p class="p">{{page.p}}</p>
+  </div>
+</section>
+
+
+<ng-template #notFound></ng-template>

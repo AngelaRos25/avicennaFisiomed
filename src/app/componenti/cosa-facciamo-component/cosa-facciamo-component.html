@@ -1,0 +1,20 @@
+<div class="cosafacciamo-container">
+  <h1>COSA FACCIAMO</h1>
+  <div class="card-container">
+    <ul class="card-list">
+      <li>
+        <div *ngFor="let dataF of data;" class="card" style="width: 18rem;">
+          <div class="image-container">
+            <img [ngSrc]="dataF.image"  fill [priority]="dataF.priority ?? false" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{dataF.title}}</h5>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="button-container">
+    <button class="scopri" routerLink="servizi">scopri di più<mat-icon>arrow_forward</mat-icon></button>
+  </div>
+</div>

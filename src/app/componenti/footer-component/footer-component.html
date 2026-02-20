@@ -1,0 +1,52 @@
+<div class="footer">
+  <div class="linea"></div>
+  <div class="container-footer">
+    <div class="container">
+  
+      <div class="container-logo top">
+        <div class="box-logo">
+          <img [ngSrc]="logoPath" class="logo" fill alt="">
+        </div>
+        <p>AVICENNA FISIOMED</p>
+      </div>
+  
+      <div class="menu-footer left">
+        <a routerLink="servizi">
+          <p>&#124; SERVIZI</p>
+        </a>
+        <a (click)="scrollTo('chi-siamo')">
+          <p>&#124; CHI SIAMO</p>
+        </a>
+        <a routerLink="contatti">
+          <p>&#124; CONTATTI</p>
+        </a>
+  
+      </div>
+      <div class="container-icon right">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/avicennafisiomed/" target="_blank">
+            <img [src]="instaIcon" class="icon" alt="">
+          </a>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/AvicennaFisiomed?locale=it_IT" target="_blank">
+            <img [src]="fbIcon" class="icon" alt="">
+          </a>
+        </div>
+        <div class="social-icons">
+          <a href="mailto:Avicennafisiomed.srl@gmail.com" target="_blank">
+            <img [src]="emailIcon" class="icon" alt="">
+          </a>
+        </div>
+        <div class="social-icons">
+          <a href="tel:+390418231920" target="_blank">
+            <img [src]="telIcon" class="icon" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="copyrigth bottom">
+        <p>Copyrigth © 2026 AVICENNA FISIOMED. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </div>
+</div>

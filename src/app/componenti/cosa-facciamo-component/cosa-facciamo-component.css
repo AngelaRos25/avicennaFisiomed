@@ -1,0 +1,181 @@
+.cosafacciamo-container {
+  height: 100vh;
+  background-color: #026568;
+  padding: 20px;
+}
+
+.cosafacciamo-container h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.card-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.image-container {
+  position: relative;
+  width: 350px;
+  height: 200px;
+  aspect-ratio: 3 / 4;
+}
+
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.card {
+  width: 350px !important;
+  margin: 10px 30px 10px 30px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.card-body {
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: end;
+}
+
+.scopri {
+  background-color: white;
+  border: none;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scopri:hover{
+  background-color: rgb(212, 210, 210);
+}
+
+mat-icon {
+  margin-left: 10px;
+}
+
+@media (max-width: 990px) and (min-width:577px) {
+  .cosafacciamo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  .cosafacciamo-container h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    margin: 0 0 10px 0;
+    width: 200px !important;
+  }
+
+  .card-list {
+    padding: 0;
+  }
+
+  .card-list li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    place-items: center;
+  }
+
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    aspect-ratio: 3 / 4;
+  }
+
+  .card-body h5 {
+    font-weight: 700;
+    font-size: 12px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .scopri {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .cosafacciamo-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .cosafacciamo-container h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    margin: 0 0 10px 0;
+    width: 150px !important;
+  }
+
+  .card-container {
+    width: 100%;
+  }
+
+  .card-list {
+    padding: 0;
+  }
+
+  .card-list li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    place-items: center;
+  }
+
+  .image-container {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    aspect-ratio: 3 / 4;
+  }
+
+  .card-body {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    text-align: left;
+  }
+
+  .card-body h5 {
+    font-weight: 700;
+    font-size: 13px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .scopri {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+  }
+}

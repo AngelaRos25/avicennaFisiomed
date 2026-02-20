@@ -1,0 +1,37 @@
+<div class="servizi-component">
+  <h1>SERVIZI</h1>
+ <div class="menu">
+
+  <!-- COLONNA SINISTRA -->
+  <div class="colonna">
+    <div *ngFor="let serv of leftColumn">
+      <h6>{{serv.title}}</h6>
+      <div class="linea"></div>
+      <ul>
+        <li *ngFor="let servizio of serv.list">
+          <a [routerLink]="['/servizi', servizio.id]"
+             [innerHTML]="servizio.titleServizio">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- COLONNA DESTRA -->
+  <div class="colonna">
+    <div *ngFor="let serv of rightColumn">
+      <h6>{{serv.title}}</h6>
+      <div class="linea"></div>
+      <ul>
+        <li *ngFor="let servizio of serv.list">
+          <a [routerLink]="['/servizi', servizio.id]"
+             [innerHTML]="servizio.titleServizio">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</div>
