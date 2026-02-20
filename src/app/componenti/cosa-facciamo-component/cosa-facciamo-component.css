@@ -1,5 +1,4 @@
 .cosafacciamo-container {
-  height: 100vh;
   background-color: #026568;
   padding: 20px;
 }
@@ -130,6 +129,7 @@ mat-icon {
 
   .cosafacciamo-container h1 {
     font-size: 28px;
+    margin-bottom: 20px;
   }
 
   .card {
@@ -146,7 +146,7 @@ mat-icon {
   }
 
   .card-list li {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     place-items: center;
@@ -177,5 +177,6 @@ mat-icon {
     width: 150px;
     height: 40px;
     font-size: 14px;
+    margin-bottom: 10px;
   }
 }
