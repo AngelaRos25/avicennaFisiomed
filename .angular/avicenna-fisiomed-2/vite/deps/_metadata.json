@@ -1,0 +1,94 @@
+{
+  "hash": "43c2b968",
+  "configHash": "b232a805",
+  "lockfileHash": "5ccc3c9d",
+  "browserHash": "570bbb4b",
+  "optimized": {
+    "@angular/cdk/bidi": {
+      "src": "../../../../../../node_modules/@angular/cdk/fesm2022/bidi.mjs",
+      "file": "@angular_cdk_bidi.js",
+      "fileHash": "40966227",
+      "needsInterop": false
+    },
+    "@angular/cdk/overlay": {
+      "src": "../../../../../../node_modules/@angular/cdk/fesm2022/overlay.mjs",
+      "file": "@angular_cdk_overlay.js",
+      "fileHash": "c88bea5d",
+      "needsInterop": false
+    },
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "3e8ff85b",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "0ab4cd7e",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "3a8b1e19",
+      "needsInterop": false
+    },
+    "@angular/material/button": {
+      "src": "../../../../../../node_modules/@angular/material/fesm2022/button.mjs",
+      "file": "@angular_material_button.js",
+      "fileHash": "4b61b871",
+      "needsInterop": false
+    },
+    "@angular/material/icon": {
+      "src": "../../../../../../node_modules/@angular/material/fesm2022/icon.mjs",
+      "file": "@angular_material_icon.js",
+      "fileHash": "a70b818c",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "eaeb8c3d",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "ef649f27",
+      "needsInterop": false
+    },
+    "leaflet": {
+      "src": "../../../../../../node_modules/leaflet/dist/leaflet-src.js",
+      "file": "leaflet.js",
+      "fileHash": "a5a31a7d",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-JZPK2NSR": {
+      "file": "chunk-JZPK2NSR.js"
+    },
+    "chunk-NKEHEGSW": {
+      "file": "chunk-NKEHEGSW.js"
+    },
+    "chunk-Y4QROSEV": {
+      "file": "chunk-Y4QROSEV.js"
+    },
+    "chunk-2KQSATKV": {
+      "file": "chunk-2KQSATKV.js"
+    },
+    "chunk-GQKYNZDL": {
+      "file": "chunk-GQKYNZDL.js"
+    },
+    "chunk-BSRZW26E": {
+      "file": "chunk-BSRZW26E.js"
+    },
+    "chunk-QRFEJ2YT": {
+      "file": "chunk-QRFEJ2YT.js"
+    },
+    "chunk-H2SRQSE4": {
+      "file": "chunk-H2SRQSE4.js"
+    }
+  }
+}
