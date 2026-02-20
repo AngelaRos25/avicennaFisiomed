@@ -44,7 +44,8 @@
                     <h6>{{ filteredServ[0].title }}</h6>
                     <ul class="list-unstyled">
                       <li *ngFor="let servizio of filteredServ[0].list">
-                        <a [routerLink]="['/servizi', servizio.id]" [innerHTML]="servizio.titleServizio">
+                        <a [routerLink]="['/servizi', servizio.id]" (click)="menuOpen = false"
+                          [innerHTML]="servizio.titleServizio">
                         </a>
                       </li>
                     </ul>
@@ -59,7 +60,8 @@
                       <h6>{{ data.title }}</h6>
                       <ul class="list-unstyled">
                         <li *ngFor="let servizio of data.list">
-                          <a [routerLink]="['/servizi', servizio.id]" [innerHTML]="servizio.titleServizio">
+                          <a [routerLink]="['/servizi', servizio.id]" (click)="menuOpen = false"
+                            [innerHTML]="servizio.titleServizio">
                           </a>
                         </li>
                       </ul>
