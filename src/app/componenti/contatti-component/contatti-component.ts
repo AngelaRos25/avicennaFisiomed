@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import * as L from 'leaflet';
 
 @Component({
   selector: 'app-contatti-component',
@@ -13,33 +12,32 @@ export class ContattiComponent implements AfterViewInit {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  async ngAfterViewInit(): Promise<void> {
-    if (isPlatformBrowser(this.platformId)) {
-      const L = await import('leaflet');
+async ngAfterViewInit(): Promise<void> {
+  if (isPlatformBrowser(this.platformId)) {
 
-      // Fix marker icons
-      delete (L.Icon.Default.prototype as any)._getIconUrl;
-      L.Icon.Default.mergeOptions({
-        iconRetinaUrl: 'assets/leaflet/marker-icon-2x.png',
-        iconUrl: 'assets/leaflet/marker-icon.png',
-        shadowUrl: 'assets/leaflet/marker-shadow.png',
-      });
+    const leaflet = await import('leaflet');
+    const L = leaflet.default ?? leaflet;
 
-      // Inizializza la mappa
-      this.map = L.map('map', {
-        center: this.centroid,
-        zoom: 16
-      });
+    // Fix marker icons
+    delete (L.Icon.Default.prototype as any)._getIconUrl;
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: 'assets/leaflet/marker-icon-2x.png',
+      iconUrl: 'assets/leaflet/marker-icon.png',
+      shadowUrl: 'assets/leaflet/marker-shadow.png',
+    });
 
-      // Tiles
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        minZoom: 10,
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(this.map);
+    this.map = L.map('map', {
+      center: this.centroid,
+      zoom: 16
+    });
 
-      // Marker
-      L.marker(this.centroid).addTo(this.map);
-    }
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      minZoom: 10,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(this.map);
+
+    L.marker(this.centroid).addTo(this.map);
   }
+}
 }
