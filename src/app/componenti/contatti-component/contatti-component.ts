@@ -4,7 +4,7 @@ import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-contatti-component',
   templateUrl: './contatti-component.html',
-  styleUrls: ['./contatti-component.css'], // corretto
+  styleUrls: ['./contatti-component.css'], 
 })
 export class ContattiComponent implements AfterViewInit {
   private map: any; 
