@@ -68,6 +68,11 @@
   box-shadow: 2px 2px 8px black;
 }
 
+.prenota a {
+  color: black;
+  text-decoration: none;
+}
+
 .prenota:hover {
   background-color: rgb(204, 202, 202);
 }
